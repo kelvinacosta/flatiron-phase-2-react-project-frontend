@@ -1,4 +1,4 @@
-Requirements
+## Requirements
 You must make a single page application (only one index.html file) using create-react-app.
 Your app should use at least 3 components in a way that keeps your code well organized.
 There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes.
@@ -26,7 +26,7 @@ Upon return of json from your POST request, a state update by a setState functio
 
 Remember: responsibility for re-rendering the page to display the updated list of movies should belong to the addMovie function; depending on a subsequent action to load the new data is not best practice.
 
-Stretch Goals
+## Stretch Goals
 Use more components and client-side routes.
 Add some styling: you're encouraged to write your CSS from scratch, either by using styled componentsLinks to an external site. or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React BootstrapLinks to an external site., Semantic UILinks to an external site., or Material UILinks to an external site.) if you prefer.
 Incorporate data from an external API. Check out this list of APIsLinks to an external site. if you need some inspiration!
@@ -34,10 +34,10 @@ Anything else you'd like! These are only the basic requirements — you're free 
 Setup
 For this project, you will need two separate repositories: one for your frontend and one for your backend. This will make it easier to deploy your project later, should you choose to do so.
 
-Frontend Setup
+## Frontend Setup
 Use create-react-app to generate starter code for your project. Follow the instructions on the create-react-appLinks to an external site. site to get started.
 
-Backend Setup
+## Backend Setup
 You can use this json-server templateLinks to an external site. to generate your backend code. Using this template will make it easier to deploy your backend later on.
 
 If you prefer, instead of using the template, you can create a db.json file in the root of your project with a structure that looks like this:
@@ -70,7 +70,7 @@ PATCH /toys/:id
 DELETE /toys/:id
 You can consult the json-server docsLinks to an external site. for more information.
 
-Deploying
+## Deploying
 When your project is complete, you are encouraged to deploy it! You'll need to deploy your frontend and backend repos to their own standalone servers.
 
 For your backend, if you are using json-server, you will need a service capable of running a Node.js server. We recommend using RenderLinks to an external site.. See the json-server templateLinks to an external site. for instructions on deploying your backend to Render.
