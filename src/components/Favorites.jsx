@@ -1,4 +1,4 @@
-const Footer = () => {
+const Favorites = () => {
     return (
         <>
         <footer>
@@ -16,4 +16,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default Favorites;

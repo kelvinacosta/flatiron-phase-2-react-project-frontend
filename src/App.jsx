@@ -1,20 +1,36 @@
 import { useState } from 'react'
+import { Route, Switch } from "react-router-dom";
 import './App.css'
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import Home from './components/Home'
+import DragonBallForm from './components/DragonBallForm';
+import Favorites from './components/Favorites'
+import NavBar from './components/NavBar';
+
 
 
 const App =  () => {
-  const [count, setCount] = useState(0)
+  
+
+ 
 
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
+    <div>
+    <NavBar />
+    <Switch>
       
-    </>
+      <Route path="/favorites">
+        <Favorites />
+      </Route>
+      <Route path="/form">
+        <DragonBallForm />
+      </Route>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      
+    </Switch>
+      
+    </div>
   )
 }
 

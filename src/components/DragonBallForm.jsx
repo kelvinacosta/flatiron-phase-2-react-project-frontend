@@ -1,8 +1,10 @@
-const Main = () => {
+import React from "react";
+
+const DragonBallForm = () => {
     return (
         <>
         <main>
-            <h2>Main Application</h2>
+            <h2>Add a Card</h2>
             <p>
                 SOME TEXT
             </p>
@@ -12,4 +14,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default DragonBallForm;
