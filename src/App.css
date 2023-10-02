@@ -20,9 +20,33 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+  .cardDragon {
+    text-align: center;
+    border: grey solid 2px;
+    padding: 0.5rem;
+    width: 14rem;
+    height: 14rem;
+    display: inline-grid;
+    margin: 2rem 2rem;
+    box-shadow: 3px 4px #e04b52;
+  }
   .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; /* Center horizontally */
+    line-height: 0;
+    
+  }
+  .cards img {
+    width: 57%;
+    height: 58%;
+    margin: .5rem auto;
+    padding: .5em;
+    
+  
+  
   }
 }
 
@@ -39,26 +63,15 @@ header h1 {
   padding: 0.5rem 0;
 }
 
-.cards {
+/* .cards {
+  display: flex;
   list-style: none;
-}
+  justify-content: center; 
+  align-items: center; 
+} */
 
-.cards img {
-  width: 56%;
-  height: 55%;
-  margin: 1rem;
-  padding: 2em;
-}
-.cardDragon {
-  text-align: center;
-  border: grey solid 2px;
-  padding: 0.5rem;
-  width: 14rem;
-  height: 14rem;
-  display: inline-grid;
-  margin: 2rem 2rem;
-  box-shadow: 3px 4px #e04b52;
-}
+
+
 input {
   padding: 0.25rem;
   border: none;
@@ -68,3 +81,4 @@ input {
   transition: all 0.2s;
   width: 100%;
 }
+
