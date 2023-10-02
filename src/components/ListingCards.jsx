@@ -7,7 +7,7 @@ const ListingCards = ({characters}) => {
     
     return (
         <main>
-            <ul>
+            <ul className="cards">
                 {listOfCards}
             </ul>
         </main>

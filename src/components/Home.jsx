@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div>
         <header>
-        <h1>My Home App</h1>
+        <h1>Dragon Ball Cards</h1>
         </header>
         <ListingCards characters={characters}/>
         

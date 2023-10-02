@@ -5,8 +5,8 @@ const Card = ({character}) => {
     const {id,name,avatar} = character
     
     return(
-        <li>
-            <div>
+        <li className="cards">
+            <div className="cardDragon">
                 <img src={avatar} alt={name}/>
             </div>
         </li>
