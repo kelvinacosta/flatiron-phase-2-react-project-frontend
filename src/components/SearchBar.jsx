@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => {
     return (
-        <div>
+        <div className="barInput">
             <input type="text" placeholder="Search Cards"/>
         </div>
     )

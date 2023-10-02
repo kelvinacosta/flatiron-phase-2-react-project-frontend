@@ -40,12 +40,10 @@
     
   }
   .cards img {
-    width: 57%;
-    height: 58%;
+    width: 60%;
+    height: 60%;
     margin: .5rem auto;
     padding: .5em;
-    
-  
   
   }
 }
@@ -72,7 +70,7 @@ header h1 {
 
 
 
-input {
+.barInput input {
   padding: 0.25rem;
   border: none;
   font-family: inherit;
@@ -80,5 +78,23 @@ input {
   border-bottom: 2px solid gray;
   transition: all 0.2s;
   width: 100%;
+}
+
+.inputText  {
+  border-radius: 5px;
+  height: 2rem;
+  width: 60%;
+  font-size: 18px;
+  font-family: monospace;
+  margin: 3px;
+}
+
+.inputTextArea{
+  border-radius: 5px;
+  height: 15rem;
+  width: 60%;
+  font-size: 18px;
+  font-family: monospace;
+  margin: 3px;
 }
 
