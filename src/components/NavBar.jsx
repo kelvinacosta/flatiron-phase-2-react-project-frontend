@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { NavLink,useLocation } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
@@ -7,6 +7,7 @@ const NavBar = ({characters,setCharacters}) => {
     // console.log(characters)
     const location = useLocation();
     const isHome = location.pathname === '/';
+    
     
    
 
@@ -22,16 +23,19 @@ const NavBar = ({characters,setCharacters}) => {
     
     return (
         <div>
+        <div className="navBar-container">
             <NavLink to="/">
-                Home
+            <img src="/icons/home.png" className="home-icon" alt="home"/>
             </NavLink>
             <NavLink to="/form">
-                ➕
+                <img src="/icons/add.png" alt="add" className="add-icon"/>
             </NavLink>
             <NavLink to="/favorites">
-                ⭐
+            <img src="/icons/star.png" alt="star" className="star-icon"/>
             </NavLink>
-            {isHome && <SearchBar onSearchDragonCards={handleCards}/>}
+            
+        </div>
+            {isHome && <SearchBar  onSearchDragonCards={handleCards}/>}
         </div>
     )
 }

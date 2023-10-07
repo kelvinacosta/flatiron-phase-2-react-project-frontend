@@ -25,7 +25,7 @@ const Favorites = ({ favorites }) => {
       
 
   return (
-    <div >
+     <div >
       <h3>My Favorites Cards</h3>
       <div className="cards">{favoritesList}</div>
     </div>

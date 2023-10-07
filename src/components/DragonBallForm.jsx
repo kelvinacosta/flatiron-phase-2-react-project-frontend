@@ -50,8 +50,12 @@ const DragonBallForm = ({addDragonCard}) => {
     }
     
     return (
-        <div className="containerForm">
+        
+
+        <div className="form-container">
+            
         <form onSubmit={handleSubmit}>
+            
             <h2>Create a Dragon Ball Card</h2>
             <input type="text" 
             name="name" 
@@ -87,7 +91,9 @@ const DragonBallForm = ({addDragonCard}) => {
 
         </form>
         
+        
         </div>
+    
     )
 }
 

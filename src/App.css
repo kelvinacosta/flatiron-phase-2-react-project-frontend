@@ -120,12 +120,83 @@ header h1 {
   margin-top: 40px;
 } */
  button{
+  background-color: whitesmoke;
   border: none;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
  
   
 }
 button:hover {
   background-color: whitesmoke;
-  border: #e04b52 solid 1px;
-  color: #e04b52;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  color: whitesmoke;
+  box-shadow: 0px 0px 10px rgba(224, 75, 82, 0.5); 
+  transform: translateY(-2px); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.home-icon{
+  width: 24px;
+  height: 24px;
+}
+
+.home-icon:hover {
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  color: whitesmoke;
+  box-shadow: 0px 0px 10px rgba(224, 75, 82, 0.5); 
+  transform: translateY(-2px); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+
+
+
+.add-icon{
+  width: 24px;
+  height: 24px;
+}
+
+.add-icon:hover {
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  color: whitesmoke;
+  box-shadow: 0px 0px 10px rgba(224, 75, 82, 0.5); 
+  transform: translateY(-2px); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+.star-icon{
+  width: 24px;
+  height: 24px;
+}
+
+.star-icon:hover {
+  background-color: whitesmoke;
+  border: 1px solid rgb(229, 202, 26);
+  color: rgb(229, 202, 26);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(224, 75, 82, 0.5); /* Add a subtle shadow effect */
+  transform: translateY(-2px); /* Move the element up slightly on hover */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add a smooth transition effect */
+}
+.navBar-container{
+  
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+
+
+
+
+.app-container {
+  margin-bottom: 10px; 
 }
