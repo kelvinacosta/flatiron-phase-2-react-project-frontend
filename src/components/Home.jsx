@@ -1,24 +1,30 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import ListingCards from "./ListingCards";
 
 
-const Home = () => {
-    
-    const [characters,setCharacters] = useState([]);
 
-    useEffect(()=>{
-        fetch("https://backend-phase-2-project-0zsy.onrender.com/characters")
-        .then(response=>response.json())
-        .then(data=>setCharacters(data))
-        .catch(err=>console.error("Error getting Cards!",err))
-    },[])
+
+const Home = ({characters,setCharacters,addDragonCard,addFavorites}) => {
     
+   
+
+    const handleAddingToy = (newCard) => {
+        const updatedCharacters = [...characters, newCard];
+        setCharacters(updatedCharacters);
+        addDragonCard(newCard); // Pass the new card to addCard
+      };
+      
+
     return (
         <div>
         <header>
         <h1>Dragon Ball Cards</h1>
         </header>
-        <ListingCards characters={characters}/>
+        <main>
+        <ListingCards characters={characters} addDragonCard={handleAddingToy}  addFavorites={addFavorites}/>
+            
+        </main>
+        
         
         </div>
     )

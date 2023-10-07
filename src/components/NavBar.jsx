@@ -1,11 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import { NavLink,useLocation } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
-const NavBar = () => {
+const NavBar = ({characters,setCharacters}) => {
     
+    // console.log(characters)
     const location = useLocation();
     const isHome = location.pathname === '/';
+    
+   
+
+    const handleCards = (searchText) => {
+        if(searchText===""){
+            setCharacters(characters)
+        }else{
+            const filterCharacters = characters.filter(character=>character.name.toLowerCase().includes(searchText))
+
+            setCharacters(filterCharacters);
+        }
+      };
     
     return (
         <div>
@@ -13,12 +26,12 @@ const NavBar = () => {
                 Home
             </NavLink>
             <NavLink to="/form">
-                Add Card
+                ➕
             </NavLink>
             <NavLink to="/favorites">
-                Favorites
+                ⭐
             </NavLink>
-            {isHome && <SearchBar />}
+            {isHome && <SearchBar onSearchDragonCards={handleCards}/>}
         </div>
     )
 }

@@ -38,14 +38,19 @@
     text-align: center; /* Center horizontally */
     line-height: 0;
     
+    
+    
   }
   .cards img {
-    width: 60%;
-    height: 60%;
-    margin: .5rem auto;
-    padding: .5em;
+    width: 58%;
+    height: 58%;
+    padding: auto;
+    margin: auto;
+    
   
   }
+
+   
 }
 
 /* .card {
@@ -98,3 +103,29 @@ header h1 {
   margin: 3px;
 }
 
+
+
+/* button {
+  text-align: center;
+  position: relative;
+  
+} */
+
+/* button{
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  justify-self: center;
+  margin-top: 40px;
+} */
+ button{
+  border: none;
+ 
+  
+}
+button:hover {
+  background-color: whitesmoke;
+  border: #e04b52 solid 1px;
+  color: #e04b52;
+}

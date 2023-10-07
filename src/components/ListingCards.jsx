@@ -1,16 +1,18 @@
 import React from "react";
-import Card from "./Cards";
+import Card from "./Card";
 
-const ListingCards = ({characters}) => {
+const ListingCards = ({characters,addDragonCard,addFavorites}) => {
     
-    const listOfCards = characters.map(character => <Card key={character.id} character={character}/>)
+    const listOfCards = characters.map(character => <Card 
+        key={character.id} 
+        character={character} 
+        addCard={addDragonCard} 
+        addFavorites={addFavorites}/>)
     
     return (
-        <main>
-            <div className="cards">
-                {listOfCards}
-            </div>
-        </main>
+    <div className="cards">
+        {listOfCards}
+        </div>
     )
 }
 
