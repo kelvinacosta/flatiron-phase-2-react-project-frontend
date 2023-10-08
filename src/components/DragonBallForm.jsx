@@ -2,18 +2,20 @@ import React,{useState} from "react";
 
 const DragonBallForm = ({addDragonCard}) => {
     
+    //Creates a form and initialize in the form database
     const [formData, setForm] = useState({
         name:"",
         description:"",
         avatar:""
 
     })
+    //Handle changes using onchange event 
     const handleChange = (e) => {
         setForm({
             ...formData,[e.target.name]:e.target.value
         })
     }
-
+    //Handles Submit button with a Post Method to create a new character for the Cards
     const handleSubmit = (e) => {
         e.preventDefault();
         //Create a new form
@@ -25,7 +27,7 @@ const DragonBallForm = ({addDragonCard}) => {
         }
 
         // console.log(newFormData)
-
+        //Fething data using POST Method
         fetch("https://backend-phase-2-project-0zsy.onrender.com/characters",{
             method: "POST",
             headers:{
@@ -36,7 +38,7 @@ const DragonBallForm = ({addDragonCard}) => {
         .then(response => response.json())
         .then(data => {
             addDragonCard(data);
-
+            //Reset form
             setForm({
                 name:"",
                 description:"",

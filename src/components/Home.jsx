@@ -4,7 +4,8 @@ import ListingCards from "./ListingCards";
 
 const Home = ({characters,setCharacters,addDragonCard,addFavorites,deleteCardId}) => {
     
-    const handleAddingToy = (newCard) => {
+    //Handles the add to favorite by using a call Back
+    const handleAddingCard = (newCard) => {
         const updatedCharacters = [...characters, newCard];
         setCharacters(updatedCharacters);
         addDragonCard(newCard); // Pass the new card to addCard
@@ -17,7 +18,7 @@ const Home = ({characters,setCharacters,addDragonCard,addFavorites,deleteCardId}
         <h1>Dragon Ball Cards</h1>
         </header>
         <main>
-        <ListingCards characters={characters} addDragonCard={handleAddingToy}  addFavorites={addFavorites} deleteCardId={deleteCardId} />  
+        <ListingCards characters={characters} addDragonCard={handleAddingCard}  addFavorites={addFavorites} deleteCardId={deleteCardId} />  
         </main>
         
         

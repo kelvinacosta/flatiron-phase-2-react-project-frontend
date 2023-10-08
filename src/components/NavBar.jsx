@@ -4,12 +4,13 @@ import SearchBar from "./SearchBar";
 
 const NavBar = ({characters,setCharacters}) => {
     
+    //Uses location to store the path for home page
     // console.log(characters)
     const location = useLocation();
     const isHome = location.pathname === '/';
     
     
-   
+   //Handles a search Bar to filter characters by name and then setting values for the character user is looking for
 
     const handleCards = (searchText) => {
         if(searchText===""){
@@ -22,6 +23,8 @@ const NavBar = ({characters,setCharacters}) => {
       };
     
     return (
+
+        //Renders NavLink Components to routes
         <div>
         <div className="navBar-container">
             <NavLink to="/">

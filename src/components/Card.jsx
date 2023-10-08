@@ -3,10 +3,13 @@ import React,{useState} from "react";
 
 const Card = ({character,addFavorites,deleteCardId}) => {
     
-
+    //Using a state to inizitale the heart for empty or full heart
     const [isHeart, setIsHeart] = useState(false);
+    
+    //Destructure character 
     const {id,name,avatar} = character
 
+    //Handles to add Favorite Character by using a call back
     const handleFavorite = () => {
         addFavorites(character)
     }
@@ -21,6 +24,7 @@ const Card = ({character,addFavorites,deleteCardId}) => {
         .then(()=>deleteCardId(id))
         .catch(err=> console.error("Error Deleting Card",err))
     }
+    //Creates an event to empty full heart or empty heart
     const handleHeart = () => {
         setIsHeart(!isHeart)
     }

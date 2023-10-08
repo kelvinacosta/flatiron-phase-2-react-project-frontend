@@ -11,11 +11,12 @@ import NavBar from './components/NavBar';
 
 const App =  () => {
 
+  //Set useState to hold the list of characters
   const [characters, setCharacters] = useState([]);
   
   const [favorites, setFavorites] = useState([]);
  
-
+  //Use effect to GET data from the api
   useEffect(()=>{
       fetch("https://backend-phase-2-project-0zsy.onrender.com/characters")
       .then(response=>response.json())
@@ -23,7 +24,7 @@ const App =  () => {
       .catch(err=>console.error("Error getting Cards!",err))
   },[])
 
-
+  //Handles changes in the App Parent component such as addingCard favorite , deleteItem Favorite and Delete Method
   const addDragonCard = (newCard) => {
     setCharacters([...characters, newCard]);
   };
@@ -44,6 +45,7 @@ const App =  () => {
   }
 
   return (
+    //Renders all the Parent components using swicth and routes
     <div className="app-container">
     <NavBar characters={characters} setCharacters={setCharacters}/>
     <Switch>

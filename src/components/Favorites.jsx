@@ -2,10 +2,11 @@ import React from "react";
 
 const Favorites = ({ favorites,deleteFavorite }) => {
     
+    //Handles Delete Item for only the Favorite component.
     const handleDelete = (character) => {
         deleteFavorite(character)
     }
-
+    //Creates A Favorite list got them from ListCard
     const favoritesList = favorites.map((character) => (
         <div key={character.id} >
             <div className="cardDragon">
