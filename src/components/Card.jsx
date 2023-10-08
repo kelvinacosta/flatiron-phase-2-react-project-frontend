@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 
 
 const Card = ({character,addFavorites,deleteCardId}) => {
     
+
+    const [isHeart, setIsHeart] = useState(false);
     const {id,name,avatar} = character
 
     const handleFavorite = () => {
@@ -19,6 +21,11 @@ const Card = ({character,addFavorites,deleteCardId}) => {
         .then(()=>deleteCardId(id))
         .catch(err=> console.error("Error Deleting Card",err))
     }
+    const handleHeart = () => {
+        setIsHeart(!isHeart)
+    }
+
+
     
     return(
         <div>
@@ -30,7 +37,7 @@ const Card = ({character,addFavorites,deleteCardId}) => {
     
             </div>
             <div>
-                <button className="button-like">{"❤️"}</button>
+                {isHeart ? <button onClick={handleHeart}>{"❤️"}</button> : <button className="button-like" onClick={handleHeart}>{"🤍"}</button>}
                 <button onClick={handleFavorite}>{"⭐"}</button>
                 <button onClick={()=>handleDelete(character.id)}>🗑️</button>
             </div>    
