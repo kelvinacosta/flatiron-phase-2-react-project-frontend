@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-const ListingCards = ({characters,addDragonCard,addFavorites,deleteFavorite}) => {
+const ListingCards = ({characters,addDragonCard,addFavorites,deleteFavorite,deleteCardId}) => {
     
     const listOfCards = characters.map(character => <Card 
         key={character.id} 
@@ -9,6 +9,7 @@ const ListingCards = ({characters,addDragonCard,addFavorites,deleteFavorite}) =>
         addCard={addDragonCard} 
         addFavorites={addFavorites}
         deleteFavorite={deleteFavorite}
+        deleteCardId={deleteCardId}
         />)
     
     return (

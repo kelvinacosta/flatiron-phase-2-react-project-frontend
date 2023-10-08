@@ -37,6 +37,12 @@ const App =  () => {
     setFavorites(updatedFavorites);
   }
 
+  const removeId = (cardToDelete) =>{
+    const updateDeleteItems = characters.filter(character => character.id !== cardToDelete)
+
+    setCharacters(updateDeleteItems)
+  }
+
   return (
     <div className="app-container">
     <NavBar characters={characters} setCharacters={setCharacters}/>
@@ -49,7 +55,7 @@ const App =  () => {
         <DragonBallForm addDragonCard={addDragonCard}/>
       </Route>
       <Route exact path="/">
-        <Home characters={characters} setCharacters={setCharacters} addFavorites={addFavorites}/>
+        <Home characters={characters} setCharacters={setCharacters} addFavorites={addFavorites} deleteCardId={removeId}/>
       </Route>
       
     </Switch>
