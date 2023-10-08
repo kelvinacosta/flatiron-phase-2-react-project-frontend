@@ -1,8 +1,10 @@
 import React from "react";
 
-const Favorites = ({ favorites }) => {
-  
+const Favorites = ({ favorites,deleteFavorite }) => {
     
+    const handleDelete = (character) => {
+        deleteFavorite(character)
+    }
 
     const favoritesList = favorites.map((character) => (
         <div key={character.id} >
@@ -17,7 +19,7 @@ const Favorites = ({ favorites }) => {
             </div>
             </div>
             <div>
-                <button>🗑️</button>
+                <button onClick={()=>handleDelete(character.id)}>🗑️</button>
             </div>
             
         </div>

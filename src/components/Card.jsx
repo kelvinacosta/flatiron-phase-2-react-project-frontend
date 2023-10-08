@@ -21,8 +21,7 @@ const Card = ({character,addFavorites}) => {
             <div>
                 <button className="button-like">{"❤️"}</button>
                 <button onClick={handleFavorite}>{"⭐"}</button>
-            </div>  
-            
+            </div>    
 
         </div>
         

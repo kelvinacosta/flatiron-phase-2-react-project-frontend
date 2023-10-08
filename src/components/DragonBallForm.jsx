@@ -86,7 +86,9 @@ const DragonBallForm = ({addDragonCard}) => {
             />
             <br />
             <input type="submit" 
-            name="submit" />
+            name="submit" 
+            className="submitButon"
+            />
             
 
         </form>

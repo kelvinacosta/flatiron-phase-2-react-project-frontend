@@ -2,12 +2,8 @@ import React from "react";
 import ListingCards from "./ListingCards";
 
 
-
-
 const Home = ({characters,setCharacters,addDragonCard,addFavorites}) => {
     
-   
-
     const handleAddingToy = (newCard) => {
         const updatedCharacters = [...characters, newCard];
         setCharacters(updatedCharacters);
@@ -21,8 +17,7 @@ const Home = ({characters,setCharacters,addDragonCard,addFavorites}) => {
         <h1>Dragon Ball Cards</h1>
         </header>
         <main>
-        <ListingCards characters={characters} addDragonCard={handleAddingToy}  addFavorites={addFavorites}/>
-            
+        <ListingCards characters={characters} addDragonCard={handleAddingToy}  addFavorites={addFavorites} />  
         </main>
         
         

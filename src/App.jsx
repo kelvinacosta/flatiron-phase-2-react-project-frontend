@@ -12,6 +12,7 @@ import NavBar from './components/NavBar';
 const App =  () => {
 
   const [characters, setCharacters] = useState([]);
+  
   const [favorites, setFavorites] = useState([]);
  
 
@@ -31,13 +32,18 @@ const App =  () => {
     setFavorites([...favorites,favorite])
   }
 
+  const deletingFavorites = (itemToDelete) => {
+    const updatedFavorites = favorites.filter(character => character.id !== itemToDelete )
+    setFavorites(updatedFavorites);
+  }
+
   return (
     <div className="app-container">
     <NavBar characters={characters} setCharacters={setCharacters}/>
     <Switch>
       
       <Route path="/favorites">
-        <Favorites favorites={favorites} addFavorites={addFavorites}/>
+        <Favorites favorites={favorites} addFavorites={addFavorites} deleteFavorite={deletingFavorites}/>
       </Route>
       <Route path="/form">
         <DragonBallForm addDragonCard={addDragonCard}/>

@@ -124,8 +124,10 @@ header h1 {
   border: none;
   border: 1px solid whitesmoke;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+  
+ 
  
   
 }
@@ -194,7 +196,23 @@ button:hover {
 }
 
 
-
+.submitButon{
+  border-radius: 5px;
+  height: 2rem;
+  width: 20%;
+  font-size: 18px;
+  font-family: monospace;
+  margin: 3px;
+}
+.submitButon:hover{
+  background-color: whitesmoke;
+  border: 1px solid rgb(229, 202, 26);
+  color: rgb(229, 202, 26);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(224, 75, 82, 0.5); /* Add a subtle shadow effect */
+  transform: translateY(-2px); /* Move the element up slightly on hover */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /
+}
 
 
 .app-container {
