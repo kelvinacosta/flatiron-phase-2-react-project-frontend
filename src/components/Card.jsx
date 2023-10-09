@@ -5,9 +5,7 @@ const Card = ({character,addFavorites,deleteCardId}) => {
     
     //Using a state to inizitale the heart for empty or full heart
     const [isHeart, setIsHeart] = useState(false);
-    const [isStar, setIsStar] = useState(
-        localStorage.getItem(`favorite_${character.id}`) === "true"
-      );
+    const [isStar, setIsStar] = useState(false)
     
     //Destructure character 
     const {id,name,avatar} = character
@@ -49,7 +47,7 @@ const Card = ({character,addFavorites,deleteCardId}) => {
             </div>
             <div>
                 {isHeart ? <button onClick={handleHeart}>{"❤️"}</button> : <button className="button-like" onClick={handleHeart}>{"🤍"}</button>}
-                {isStar?<button onClick={handleFavorite}>{"⭐"}</button> : <button onClick={handleFavorite}>{"☆"}</button>}
+                <button onClick={handleFavorite}>{"⭐"}</button> 
                 <button onClick={()=>handleDelete(character.id)}>🗑️</button>
             </div>    
 
