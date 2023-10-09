@@ -64,7 +64,7 @@ const DragonBallForm = ({addDragonCard}) => {
             placeholder="Enter Character Name..." 
             className="inputText"
             onChange={handleChange}
-            value={formData.name}
+            value={formData.name} //uses controlled value
             />
             
             <br />
@@ -84,7 +84,7 @@ const DragonBallForm = ({addDragonCard}) => {
             placeholder="Enter Character's Image URL..." 
             className="inputText"
             onChange={handleChange}
-            value={formData.avatar}
+            value={formData.avatar} //uses controlled value
             />
             <br />
             <input type="submit" 
