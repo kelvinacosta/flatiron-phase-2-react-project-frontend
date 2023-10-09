@@ -1,16 +1,23 @@
-import React,{useState} from "react";
+import React,{useState, useEffect } from "react";
 
 
 const Card = ({character,addFavorites,deleteCardId}) => {
     
     //Using a state to inizitale the heart for empty or full heart
     const [isHeart, setIsHeart] = useState(false);
+    const [isStar, setIsStar] = useState(
+        localStorage.getItem(`favorite_${character.id}`) === "true"
+      );
     
     //Destructure character 
     const {id,name,avatar} = character
 
+    useEffect(() => {
+        localStorage.setItem(`favorite_${id}`, isStar);
+      }, [id, isStar]);
     //Handles to add Favorite Character by using a call back
     const handleFavorite = () => {
+        setIsStar(!isStar)
         addFavorites(character)
     }
 
@@ -42,7 +49,7 @@ const Card = ({character,addFavorites,deleteCardId}) => {
             </div>
             <div>
                 {isHeart ? <button onClick={handleHeart}>{"❤️"}</button> : <button className="button-like" onClick={handleHeart}>{"🤍"}</button>}
-                <button onClick={handleFavorite}>{"⭐"}</button>
+                {isStar?<button onClick={handleFavorite}>{"⭐"}</button> : <button onClick={handleFavorite}>{"☆"}</button>}
                 <button onClick={()=>handleDelete(character.id)}>🗑️</button>
             </div>    
 
